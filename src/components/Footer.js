@@ -1,7 +1,7 @@
-import React from 'react';
+import {Component} from 'react';
 
 
-class Footer extends React.Component{
+class Footer extends Component{
     render() {
         return (
             <footer class="text-muted">
@@ -9,8 +9,9 @@ class Footer extends React.Component{
                     <p class="float-right">
                     <a href="#">Back to top</a>
                     </p>
-                    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-                    <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+                    <p>Album de Digimon para que lo disfrutes!</p>
+                    <p>Desarrollo para el módulo de React del Informatorio-2020 </p>
+                    <p>Contacto: salvamanu12@gmail.com</p>
                 </div>
             </footer>
         );
