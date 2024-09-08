@@ -15,11 +15,11 @@ class Home extends React.Component{
             personajes:[{}],
         },
         currentPage:1,
-        totalPages:5 
+        totalPages:70
     };
     
     componentDidMount(){
-        this.getPersonajes(1);
+        this.getPersonajes();
     }
 
   
@@ -30,44 +30,19 @@ class Home extends React.Component{
         this.getPersonajes(page);
     };
 
-    getPersonajes = async(page) => {
+    getPersonajes = async() => {
         this.setState({loading:true,error:null});
-        let inf=0;
-        let sup=0;
-        switch (page) {
-            case 1:
-                inf=0
-                sup=9
-                break;
-            case 2:
-                inf=10
-                sup=19
-                break;
-            case 3:
-                inf=20
-                sup=29
-                break;
-            case 4:
-                inf=30
-                sup=39
-                break;
-            case 5:
-                inf=40
-                sup=49
-                break;
-            default:
-                break;
-        }
+
         try{
             const response = await fetch('https://digimon-api.vercel.app/api/digimon');
             const data = await response.json();
-            const datarecortada = data.slice(inf,sup);
+            const datarecortada = data.slice((this.state.currentPage-1)*3,((this.state.currentPage-1)*3)+3);
             console.log(datarecortada); 
             this.setState({
                 loading : false,
                 data: {
                     personajes: datarecortada,
-                },
+                }
             })
         }catch(error){
             console.log("Error en la pagina");
