@@ -1,4 +1,6 @@
 import {Component} from 'react';
+import ImageDownloader from './ImageDownloader';
+
 
 
 class Post extends Component{
@@ -10,12 +12,12 @@ class Post extends Component{
               <h4 >{this.props.titulo}</h4>
             </div>
             
-            <img src={this.props.imagen}></img>
+            <img src={this.props.imagen}  alt="text"></img>
             <div class="card-body">
               <p class="card-text">Level: {this.props.descripcion}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <ImageDownloader imgUrl={this.props.imagen} fileName={this.props.titulo} />
                   {/* <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> */}
                 </div>
                 {/* <small class="text-muted">9 mins</small> */}
