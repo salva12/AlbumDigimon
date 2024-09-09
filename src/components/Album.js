@@ -4,7 +4,7 @@ import Post from "./Post"
 class Album extends Component{
     render() {
         return (
-            <div class="album py-5 bg-light">
+            <div class="album py-0 bg-light">
                 <div class="container">
                     <div class = "row">
                     {console.log("abrio el componente album")}      

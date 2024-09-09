@@ -56,7 +56,7 @@ class Home extends React.Component{
             <React.Fragment>
             <Header />
                 <Introduccion titulo="Recordando Digimon" descripcion="Algunos de los personajes más icónicos de esta serie y juego mundialmente reconocido."/>
-                <div class="album py-5 bg-light">
+                <div class="album py-0 bg-light">
                         <div class="container">                              
                                 <Album personajes={this.state.data.personajes}/>
                                 {this.state.loading && <h6 className="text-center">Cargando...</h6>}                          
