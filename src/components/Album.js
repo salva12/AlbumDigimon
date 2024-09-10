@@ -8,7 +8,7 @@ class Album extends Component{
                 <div class="container">
                     <div class = "row">
                     {console.log("abrio el componente album")}      
-                    {this.props.personajes.map((personaje) =><Post titulo={personaje.name} imagen ={personaje.img} descripcion={personaje.level} />)}
+                    {this.props.personajes.map((personaje,i) =><Post titulo={personaje.name} imagen ={personaje.img} descripcion={personaje.level} key={i}/>)}
                     </div>           
                 </div>
             </div>
