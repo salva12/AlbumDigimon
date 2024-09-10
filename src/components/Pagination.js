@@ -34,7 +34,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       <nav aria-label="Page navigation">
         <ul className="pagination">
           <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
-            <a href="#">
+            <a href="/#">
               <button className="page-link" onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
                 Anterior
               </button>
@@ -45,7 +45,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
               {page === '...' ? (
                 <span className="page-link">...</span>
               ) : (
-                <a href="#">
+                <a href="/#">
                   <button className="page-link" onClick={() => onPageChange(page)}>
                     {page}
                   </button>
@@ -55,7 +55,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
             </li>
           ))}
           <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
-          <a href="#">
+          <a href="/#">
             <button className="page-link" onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} >
               Siguiente
             </button>

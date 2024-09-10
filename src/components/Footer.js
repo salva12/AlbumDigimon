@@ -7,7 +7,7 @@ class Footer extends Component{
             <footer class="text-muted">
                 <div class="container">
                     <p class="float-right">
-                    <a href="#">Back to top</a>
+                    <a href="/#">Back to top</a>
                     </p>
                     <p>Album de Digimon para que lo disfrutes!</p>
                     <p>Desarrollo para el módulo de React del Informatorio-2020 </p>
