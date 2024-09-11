@@ -5,11 +5,11 @@ import Header from '../components/Header'
 import Album from '../components/Album'
 import Introduccion from '../components/Introduccion'
 import Pagination from '../components/Pagination';
-
+import LoadingPage from '../components/LoadingPage';
 
 class Home extends React.Component{
     state= {
-        loading: true,
+        loading: false,
         error: null,
         data:{
             personajes:[{}],
@@ -39,15 +39,23 @@ class Home extends React.Component{
             const datarecortada = data.slice((this.state.currentPage-1)*3,((this.state.currentPage-1)*3)+3);
             console.log(datarecortada); 
             this.setState({
-                loading : false,
                 data: {
                     personajes: datarecortada,
                 }
-            })
+            });
+
+            setTimeout(() => {
+                this.setState({
+                    loading: false
+                });
+              }, "300");
+
+
         }catch(error){
             console.log("Error en la pagina");
             this.setState({loading:false, error:error})
         }
+
     }
     
 
@@ -56,13 +64,21 @@ class Home extends React.Component{
             <React.Fragment>
             <Header />
                 <Introduccion titulo="Recordando Digimon" descripcion="Algunos de los personajes más icónicos de esta serie y juego mundialmente reconocido."/>
+                
+                
                 <div class="album py-0 bg-light">
-                        <div class="container">                              
+                        <div class="container">          
+                        {this.state.loading ?                     
+                                <LoadingPage />    
+                                :
                                 <Album personajes={this.state.data.personajes}/>
-                                {this.state.loading && <h6 className="text-center">Cargando...</h6>}                          
-                            
+                        }
                         </div>
+                        
                 </div>
+                
+                
+                {/* <LoadingPage /> */}
                 <Pagination currentPage={this.state.currentPage} totalPages={this.state.totalPages} onPageChange={this.handlePageChange} />
 
             <Footer />

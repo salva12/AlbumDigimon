@@ -17,7 +17,7 @@ class Post extends Component{
               <p class="card-text">Level: {this.props.descripcion}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <ImageDownloader imgUrl={this.props.imagen} fileName={this.props.titulo} />
+                  {/* <ImageDownloader imgUrl={this.props.imagen} fileName={this.props.titulo} /> */}
                   {/* <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> */}
                 </div>
                 {/* <small class="text-muted">9 mins</small> */}
