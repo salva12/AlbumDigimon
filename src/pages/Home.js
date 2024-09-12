@@ -63,7 +63,7 @@ class Home extends React.Component{
         return (
             <React.Fragment>
             <Header />
-                <Introduccion titulo="Recordando Digimon" descripcion="Algunos de los personajes más icónicos de esta serie y juego mundialmente reconocido."/>
+                <Introduccion titulo="Digimon memories" descripcion="Some of the most iconic characters from this globally recognized series and game."/>
                 
                 
                 <div class="album py-0 bg-light">

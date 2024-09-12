@@ -36,7 +36,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
             <a href="/#">
               <button className="page-link" onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
-                Anterior
+                Previous
               </button>
             </a>
           </li>
@@ -57,7 +57,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
           <a href="/#">
             <button className="page-link" onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} >
-              Siguiente
+              Next
             </button>
           </a>
           </li>

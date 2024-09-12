@@ -9,9 +9,8 @@ class Footer extends Component{
                     <p class="float-right">
                     <a href="/#">Back to top</a>
                     </p>
-                    <p>Album de Digimon para que lo disfrutes!</p>
-                    <p>Desarrollo para el módulo de React del Informatorio-2020 </p>
-                    <p>Contacto: salvamanu12@gmail.com</p>
+                    <p>Development for React Module  | Informatorio-2020 </p>
+                    <p>Contact: salvamanu12@gmail.com</p>
                 </div>
             </footer>
         );
