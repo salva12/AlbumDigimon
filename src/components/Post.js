@@ -1,6 +1,6 @@
 import {Component} from 'react';
 // import ImageDownloader from './ImageDownloader';
-
+import ImageWithSkeleton from './ImageWithSkeleton';
 
 
 class Post extends Component{
@@ -12,7 +12,9 @@ class Post extends Component{
               <h4 >{this.props.titulo}</h4>
             </div>
             
-            <img src={this.props.imagen}  alt="text"></img>
+            {/* <img src={this.props.imagen}  alt="text"></img> */}
+            <ImageWithSkeleton src={this.props.imagen} alt="Imagen de prueba" />
+
             <div class="card-body">
               <p class="card-text">Level: {this.props.descripcion}</p>
               <div class="d-flex justify-content-between align-items-center">
