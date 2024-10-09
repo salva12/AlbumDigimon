@@ -1,4 +1,6 @@
 import {Component} from 'react';
+import { FaCameraRetro } from 'react-icons/fa';
+
 
 class Header extends Component{
 
@@ -7,10 +9,12 @@ class Header extends Component{
         return (
             <header>
 
-            <div class="navbar navbar-dark shadow-sm custom-nav">
-              <div class="container d-flex justify-content-between">                  
-                  <p>Digi-Album<i class="fab fa-amazon"></i></p>
+            <div class="navbar-dark shadow-sm custom-nav">
+              {/*  */}
+              <div class="container d-flex justify-content-between">    
+                  <p><FaCameraRetro class="custom-icon"/>Digi-Album</p>
               </div>
+             
             </div>
 
             </header>
