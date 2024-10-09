@@ -61,7 +61,7 @@ class Home extends React.Component{
 
     render() {
         return (
-            <React.Fragment>
+            <React.Fragment class="main">
             <Header />
                 <Introduccion titulo="Digimon memories" descripcion="Some of the most iconic characters from this globally recognized series and game."/>
                 

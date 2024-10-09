@@ -30,7 +30,6 @@ code {
 
 .custom-footer {
   background-color: #3b9ff9;
-  flex-flow: row;
   p {
     font-weight:bold ;
      font-family:Georgia;
@@ -38,6 +37,7 @@ code {
      text-shadow: 0px 1px 1px black;
   }
   margin: 0;
+  padding: 2px;
 }
 
 .custom-nav {
@@ -55,4 +55,8 @@ code {
 .custom-icon{
   margin-right: 0.5rem;
   font-size: 2rem;
+}
+
+.main{
+  flex: 1;
 }
