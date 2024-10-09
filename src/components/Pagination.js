@@ -35,7 +35,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         <ul className="pagination">
           <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
             <a href="/#">
-              <button className="page-link" onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
+              <button className="page-link custom-desc" onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
                 Previous
               </button>
             </a>
@@ -46,7 +46,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
                 <span className="page-link">...</span>
               ) : (
                 <a href="/#">
-                  <button className="page-link" onClick={() => onPageChange(page)}>
+                  <button className="page-link custom-desc" onClick={() => onPageChange(page)}>
                     {page}
                   </button>
                 </a>
@@ -56,7 +56,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           ))}
           <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
           <a href="/#">
-            <button className="page-link" onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} >
+            <button className="page-link custom-desc" onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages} >
               Next
             </button>
           </a>

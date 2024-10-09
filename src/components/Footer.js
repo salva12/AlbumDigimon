@@ -3,9 +3,12 @@ import {Component} from 'react';
 
 class Footer extends Component{
     render() {
+        const navbarCustom = {
+            background:'#3b9ff9',
+          }
         return (
-            <footer class="text-muted">
-                <div class="container">
+            <footer class="custom-footer">
+                <div class="container" type={navbarCustom}>
                     <p class="float-right">
                     <a href="/#">Back to top</a>
                     </p>
