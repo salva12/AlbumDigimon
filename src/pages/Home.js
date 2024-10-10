@@ -24,7 +24,7 @@ class Home extends React.Component{
 
   
     handlePageChange = (page) => {
-        console.log('cambie de pagina')
+        // console.log('cambie de pagina')
         this.setState({currentPage : page})
       // Perform other actions like fetching data for the new page
         this.getPersonajes(page);
@@ -37,7 +37,7 @@ class Home extends React.Component{
             const response = await fetch('https://digimon-api.vercel.app/api/digimon');
             const data = await response.json();
             const datarecortada = data.slice((this.state.currentPage-1)*3,((this.state.currentPage-1)*3)+3);
-            console.log(datarecortada); 
+            // console.log(datarecortada); 
             this.setState({
                 data: {
                     personajes: datarecortada,
@@ -52,7 +52,7 @@ class Home extends React.Component{
 
 
         }catch(error){
-            console.log("Error en la pagina");
+            // console.log("Error en la pagina");
             this.setState({loading:false, error:error})
         }
 
@@ -61,27 +61,30 @@ class Home extends React.Component{
 
     render() {
         return (
-            <React.Fragment class="main">
-            <Header />
-                <Introduccion titulo="Digimon memories" descripcion="Some of the most iconic characters from this globally recognized series and game."/>
-                
-                
-                <div class="album py-0 bg-light">
-                        <div class="container">          
-                        {this.state.loading ?                     
-                                <LoadingPage />    
-                                :
-                                <Album personajes={this.state.data.personajes}/>
-                        }
-                        </div>
-                        
-                </div>
-                
-                
-                {/* <LoadingPage /> */}
-                <Pagination currentPage={this.state.currentPage} totalPages={this.state.totalPages} onPageChange={this.handlePageChange} />
+            <React.Fragment >
+            <div className="main">
+                <Header />
+                    <Introduccion titulo="Digimon memories" descripcion="Some of the most iconic characters from this globally recognized series and game."/>
+                    
+                    
+                    <div class="album py-0 bg-light">
+                            <div class="container">          
+                            {this.state.loading ?                     
+                                    <LoadingPage />    
+                                    :
+                                    <Album personajes={this.state.data.personajes}/>
+                            }
+                            </div>
+                            
+                    </div>
+                    
+                    
+                    {/* <LoadingPage /> */}
+                    <Pagination currentPage={this.state.currentPage} totalPages={this.state.totalPages} onPageChange={this.handlePageChange} />
 
-            <Footer />
+                <Footer />
+            </div>
+
         </React.Fragment> 
         );
       }
