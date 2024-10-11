@@ -7,9 +7,9 @@ class Footer extends Component{
             background:'#3b9ff9',
           }
         return (
-            <footer class="custom-footer">
-                <div class="container" type={navbarCustom}>
-                    <p class="float-right">
+            <footer className="custom-footer">
+                <div className="container" type={navbarCustom}>
+                    <p className="float-right">
                     <a href="/#">Back to top</a>
                     </p>
                     <p>Development for React Module  | Informatorio-2020 </p>

@@ -9,10 +9,10 @@ class Header extends Component{
         return (
             <header>
 
-            <div class="navbar-dark shadow-sm custom-nav">
+            <div className="navbar-dark shadow-sm custom-nav">
               {/*  */}
-              <div class="container d-flex justify-content-between">    
-                  <p><FaCameraRetro class="custom-icon"/>Digi-Album</p>
+              <div className="container d-flex justify-content-between">    
+                  <p><FaCameraRetro className="custom-icon"/>Digi-Album</p>
               </div>
              
             </div>

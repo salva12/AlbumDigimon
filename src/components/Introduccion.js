@@ -24,10 +24,10 @@ class Introduccion extends Component{
         }
 
         return (
-          <section class="jumbotrom-custom text-center" style={customBackground}>
-              <div class="container">
+          <section className="jumbotrom-custom text-center" style={customBackground}>
+              <div className="container">
                 <h1 className="title" style={customTitle}>{this.props.titulo}</h1>
-                <p class="lead" style={customDesc}>{this.props.descripcion}</p>
+                <p className="lead" style={customDesc}>{this.props.descripcion}</p>
               </div>
             </section>
         );

@@ -68,8 +68,8 @@ class Home extends React.Component{
                     <Introduccion titulo="Digimon memories" descripcion="Some of the most iconic characters from this globally recognized series and game."/>
                     
                     
-                    <div class="album py-0 bg-light">
-                            <div class="container">          
+                    <div className="album py-0 bg-light">
+                            <div className="container">          
                             {this.state.loading ?                     
                                     <LoadingPage />    
                                     :

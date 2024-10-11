@@ -41,7 +41,7 @@ const downloadImageAsPng = async (imgUrl, fileName) => {
 
 const ImageDownloader = ({ imgUrl, fileName }) => {
   return (
-    <button type="button" class="btn btn-sm btn-outline-secondary" onClick={() => downloadImageAsPng(imgUrl, fileName)}>
+    <button type="button" className="btn btn-sm btn-outline-secondary" onClick={() => downloadImageAsPng(imgUrl, fileName)}>
       Descargar
     </button>
   );
