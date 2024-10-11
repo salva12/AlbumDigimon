@@ -6,7 +6,8 @@ import Album from '../components/Album'
 import Introduccion from '../components/Introduccion'
 import Pagination from '../components/Pagination';
 import LoadingPage from '../components/LoadingPage';
-
+//importo axios lib
+import axios from 'axios';
 class Home extends React.Component{
     state= {
         loading: false,
@@ -34,8 +35,8 @@ class Home extends React.Component{
         this.setState({loading:true,error:null});
 
         try{
-            const response = await fetch('https://digimon-api.vercel.app/api/digimon');
-            const data = await response.json();
+            const response = await axios.get('https://digimon-api.vercel.app/api/digimon');
+            const data = response.data;
             const datarecortada = data.slice((this.state.currentPage-1)*3,((this.state.currentPage-1)*3)+3);
             // console.log(datarecortada); 
             this.setState({
